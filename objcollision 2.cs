@@ -10,14 +10,14 @@ public class objcollision : MonoBehaviour {
 	public string obj_oncollide;
 	public string obj_destroy;
 
-	//healthbar vie = new healthbar(objet, 1);
+	healthbar vie = new healthbar(objet, 1);
 
 	void OnCollisionEnter(Collision objet)
 	{
 		if (objet.gameObject.name == obj_destroy) 
 		{
-			//vie.damages(0.1f);
-			Destroy(targetRigidbody.gameObject);
+			vie.damages(0.1f);
+			//Destroy(targetRigidbody.gameObject);
 		}
 		/*else
 		{
